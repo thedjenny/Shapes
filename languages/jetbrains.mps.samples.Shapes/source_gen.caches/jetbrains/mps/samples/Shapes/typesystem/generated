@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="d7f10mpd9rkj62l7d6seud2bsd3ksfu">
+  <files names="IncreaseSize_QuickFix.java:RemoveSquare_QuickFix.java:TypesystemDescriptor.java:check_Square_NonTypesystemRule.java:typeof_Circle_InferenceRule.java:typeof_VarDeclaration_InferenceRule.java:typeof_VarReference_InferenceRule.java" />
+</product>
+
