@@ -16,7 +16,10 @@ public class MyDrawing extends JFrame {
       int a_a = 100;
       int b_b = 45 * a_a - a_a;
       graphics.setColor(Color.black);
-      graphics.drawOval(65, 455, 555, 555);
+      graphics.drawOval(65, 455, 200, 200);
+      graphics.setColor(Color.blue);
+      graphics.drawRect(200, 200, 200, 200);
+      graphics.fillRect(200, 200, 200, 200);
 
     }
   };

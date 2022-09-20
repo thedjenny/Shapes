@@ -41,6 +41,7 @@ public class myShapes {
         final SNode shape = sampleNode;
         if (SNodeOperations.isInstanceOf(shape, CONCEPTS.Shape$LQ)) {
           SLinkOperations.setTarget(newNode, LINKS.colorRef$L$0p, SNodeOperations.copyNode(SLinkOperations.getTarget(shape, LINKS.colorRef$L$0p)));
+          SPropertyOperations.assign(newNode, PROPS.isFilled$$hOA, SPropertyOperations.getBoolean(shape, PROPS.isFilled$$hOA));
         }
       }
     }
@@ -82,6 +83,7 @@ public class myShapes {
     /*package*/ static final SProperty y$wvmF = MetaAdapterFactory.getProperty(0x16bafbb4c6cd4cc5L, 0x83327c6de8729b3fL, 0x51dcaa29974fc198L, 0x51dcaa29974fc19bL, "y");
     /*package*/ static final SProperty size$wB$e = MetaAdapterFactory.getProperty(0x16bafbb4c6cd4cc5L, 0x83327c6de8729b3fL, 0x51dcaa29974fc1a2L, 0x51dcaa29974fc1a8L, "size");
     /*package*/ static final SProperty value$jgCM = MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value");
+    /*package*/ static final SProperty isFilled$$hOA = MetaAdapterFactory.getProperty(0x16bafbb4c6cd4cc5L, 0x83327c6de8729b3fL, 0x51dcaa29974fc161L, 0x5b0586b27b161ae1L, "isFilled");
   }
 
   private static final class LINKS {

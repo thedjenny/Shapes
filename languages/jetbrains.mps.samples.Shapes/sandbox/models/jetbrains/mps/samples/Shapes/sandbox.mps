@@ -35,6 +35,11 @@
       <concept id="5898776707557474657" name="jetbrains.mps.samples.Shapes.structure.Shape" flags="ng" index="36$QH8">
         <child id="4191445539799470732" name="colorRef" index="3_3Tce" />
       </concept>
+      <concept id="5898776707557474722" name="jetbrains.mps.samples.Shapes.structure.Square" flags="ng" index="36$QIb">
+        <property id="5898776707557474728" name="size" index="36$QI1" />
+        <property id="5898776707557474723" name="upperLeftX" index="36$QIa" />
+        <property id="5898776707557474725" name="upperLeftY" index="36$QIc" />
+      </concept>
       <concept id="5898776707557474712" name="jetbrains.mps.samples.Shapes.structure.Circle" flags="ng" index="36$QIL">
         <property id="5898776707557474713" name="x" index="36$QIK" />
         <property id="5898776707557474715" name="y" index="36$QIM" />
@@ -79,10 +84,18 @@
       <property role="36$QIK" value="65" />
       <property role="36$QIM" value="455" />
       <node concept="3cmrfG" id="1D0lj5TiajV" role="J030w">
-        <property role="3cmrfH" value="555" />
+        <property role="3cmrfH" value="200" />
       </node>
       <node concept="3_2g0H" id="1D0lj5TiajW" role="3_3Tce">
         <ref role="3_2gco" to="r2wu:6ckZSPrYT8k" resolve="black" />
+      </node>
+    </node>
+    <node concept="36$QIb" id="5G5xF9V5Sas" role="36$P1I">
+      <property role="36$QIa" value="200" />
+      <property role="36$QIc" value="200" />
+      <property role="36$QI1" value="200" />
+      <node concept="3_2g0H" id="5G5xF9V5Sau" role="3_3Tce">
+        <ref role="3_2gco" to="r2wu:6ckZSPrYT8n" resolve="blue" />
       </node>
     </node>
     <node concept="1z10Ml" id="1D0lj5Tiai5" role="36$P1I" />

@@ -9,10 +9,15 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.lang.structure.editor.structure_StyleSheet.KeywordStyleClass;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
+import jetbrains.mps.lang.editor.menus.transformation.DefaultTransformationMenuLookup;
+import jetbrains.mps.smodel.language.LanguageRegistry;
+import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.openapi.editor.menus.transformation.SPropertyInfo;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Property;
@@ -53,28 +58,45 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setCellId("Collection_gaismf_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
-    editorCell.addEditorCell(createConstant_0());
+    if (nodeCondition_gaismf_a0a()) {
+      editorCell.addEditorCell(createConstant_0());
+    }
     editorCell.addEditorCell(createConstant_1());
-    editorCell.addEditorCell(createProperty_0());
     editorCell.addEditorCell(createConstant_2());
-    editorCell.addEditorCell(createProperty_1());
+    editorCell.addEditorCell(createProperty_0());
     editorCell.addEditorCell(createConstant_3());
+    editorCell.addEditorCell(createProperty_1());
+    editorCell.addEditorCell(createConstant_4());
     editorCell.addEditorCell(createProperty_2());
     editorCell.addEditorCell(createComponent_0());
+    editorCell.addEditorCell(createConstant_5());
     return editorCell;
   }
+  private boolean nodeCondition_gaismf_a0a() {
+    return SPropertyOperations.getBoolean(myNode, PROPS.isFilled$$hOA);
+  }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "square");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "filled");
     editorCell.setCellId("Constant_gaismf_a0");
-    Style style = new StyleImpl();
-    new KeywordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
-    editorCell.getStyle().putAll(style);
+    DeletingFilledFlag.setCellActions(editorCell, myNode, getEditorContext());
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "x:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "square");
     editorCell.setCellId("Constant_gaismf_b0");
+    Style style = new StyleImpl();
+    new KeywordStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    style.set(StyleAttributes.EDITABLE, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), CONCEPTS.Shape$LQ));
+    editorCell.setDefaultText("");
+    editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
+    return editorCell;
+  }
+  private EditorCell createConstant_2() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "x:");
+    editorCell.setCellId("Constant_gaismf_c0");
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -103,9 +125,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
       getCellFactory().popCellContext();
     }
   }
-  private EditorCell createConstant_2() {
+  private EditorCell createConstant_3() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "y:");
-    editorCell.setCellId("Constant_gaismf_d0");
+    editorCell.setCellId("Constant_gaismf_e0");
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -134,9 +156,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
       getCellFactory().popCellContext();
     }
   }
-  private EditorCell createConstant_3() {
+  private EditorCell createConstant_4() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "size:");
-    editorCell.setCellId("Constant_gaismf_f0");
+    editorCell.setCellId("Constant_gaismf_g0");
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -169,14 +191,22 @@ import org.jetbrains.mps.openapi.language.SConcept;
     EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "jetbrains.mps.samples.Shapes.editor.ShapeColor");
     return editorCell;
   }
+  private EditorCell createConstant_5() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    editorCell.setCellId("Constant_gaismf_j0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
 
   private static final class PROPS {
+    /*package*/ static final SProperty isFilled$$hOA = MetaAdapterFactory.getProperty(0x16bafbb4c6cd4cc5L, 0x83327c6de8729b3fL, 0x51dcaa29974fc161L, 0x5b0586b27b161ae1L, "isFilled");
     /*package*/ static final SProperty upperLeftX$wAp9 = MetaAdapterFactory.getProperty(0x16bafbb4c6cd4cc5L, 0x83327c6de8729b3fL, 0x51dcaa29974fc1a2L, 0x51dcaa29974fc1a3L, "upperLeftX");
     /*package*/ static final SProperty upperLeftY$wARb = MetaAdapterFactory.getProperty(0x16bafbb4c6cd4cc5L, 0x83327c6de8729b3fL, 0x51dcaa29974fc1a2L, 0x51dcaa29974fc1a5L, "upperLeftY");
     /*package*/ static final SProperty size$wB$e = MetaAdapterFactory.getProperty(0x16bafbb4c6cd4cc5L, 0x83327c6de8729b3fL, 0x51dcaa29974fc1a2L, 0x51dcaa29974fc1a8L, "size");
   }
 
   private static final class CONCEPTS {
+    /*package*/ static final SConcept Shape$LQ = MetaAdapterFactory.getConcept(0x16bafbb4c6cd4cc5L, 0x83327c6de8729b3fL, 0x51dcaa29974fc161L, "jetbrains.mps.samples.Shapes.structure.Shape");
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
   }
 }

@@ -80,6 +80,11 @@
       <property role="IQ2ns" value="4191445539799470732" />
       <ref role="20lvS9" node="3CF0obv8w6J" resolve="ColorReference" />
     </node>
+    <node concept="1TJgyi" id="5G5xF9V5xFx" role="1TKVEl">
+      <property role="IQ2nx" value="6558796533462342369" />
+      <property role="TrG5h" value="isFilled" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
   </node>
   <node concept="1TIwiD" id="57sEyAnjW6o">
     <property role="TrG5h" value="Circle" />

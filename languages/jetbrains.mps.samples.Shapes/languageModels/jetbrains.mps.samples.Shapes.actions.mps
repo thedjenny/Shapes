@@ -306,6 +306,24 @@
                   </node>
                 </node>
               </node>
+              <node concept="3clFbF" id="5G5xF9V6aUO" role="3cqZAp">
+                <node concept="37vLTI" id="5G5xF9V6bu5" role="3clFbG">
+                  <node concept="2OqwBi" id="5G5xF9V6b$I" role="37vLTx">
+                    <node concept="Jnkvi" id="5G5xF9V6byl" role="2Oq$k0">
+                      <ref role="1M0zk5" node="1D0lj5ThQag" resolve="shape" />
+                    </node>
+                    <node concept="3TrcHB" id="5G5xF9V6bG8" role="2OqNvi">
+                      <ref role="3TsBF5" to="lpry:5G5xF9V5xFx" resolve="isFilled" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="5G5xF9V6b3E" role="37vLTJ">
+                    <node concept="1r4Lsj" id="5G5xF9V6aUN" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="5G5xF9V6blM" role="2OqNvi">
+                      <ref role="3TsBF5" to="lpry:5G5xF9V5xFx" resolve="isFilled" />
+                    </node>
+                  </node>
+                </node>
+              </node>
             </node>
             <node concept="JncvC" id="1D0lj5ThQag" role="JncvA">
               <property role="TrG5h" value="shape" />
